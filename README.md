@@ -25,6 +25,7 @@ Add the gem to project
     gem install devise
 
 Run the generator  
+
     rails generate devise:install  
 
 Add the config in the environment  
