@@ -31,3 +31,7 @@ Add the flash messages in the layout file (application.html.erb)
 Copy the device viewa into the project for customization (optional)   
 
     rails g devise:views
+
+Add the user model
+
+    rails g device User
