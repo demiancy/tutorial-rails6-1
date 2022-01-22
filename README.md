@@ -5,6 +5,13 @@ First tutorial of Ruby on Rails (https://www.youtube.com/watch?v=u2o_new-T0o)
 Simple project manager app
 
 # Gems
+## Mysql2
+Add support to mysql database  
+## Install
+Add the gem to project
+
+    gem install mysql2
+
 ## Devise
 Add support to authentication users
 ### Install
