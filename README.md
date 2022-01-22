@@ -4,10 +4,15 @@ First tutorial of Ruby on Rails (https://www.youtube.com/watch?v=u2o_new-T0o)
 # App
 Simple project manager app
 
+# Tasks
+Regenerate the database 
+
+    rails dev:build
+
 # Gems
 ## Mysql2
 Add support to mysql database  
-## Install
+### Install
 Add the gem to project
 
     gem install mysql2
@@ -42,3 +47,17 @@ Copy the device viewa into the project for customization (optional)
 Add the user model
 
     rails g device User
+
+## Nested Scaffold
+A scaffold command that generates a set of perfectly working nested resource
+### Install
+Add the gem to project
+
+    gem install nested_scaffold
+
+Use
+
+    rails g scaffold Model attributes
+
+# Notes
+
