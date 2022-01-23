@@ -1,64 +1,24 @@
 # tutorial-rails6-1
-First tutorial of Ruby on Rails (https://www.youtube.com/watch?v=u2o_new-T0o)
+First tutorial of Ruby on Rails 6 (https://www.youtube.com/watch?v=u2o_new-T0o)
 
 # App
 Simple project manager app
 
-# Tasks
-Regenerate the database 
+# Features
+* User authentication
+* Project crud
+* Task crud
 
-    rails dev:build
+# Deployment
 
-# Gems
-## Mysql2
-Add support to mysql database  
-### Install
-Add the gem to project
+First you have to download the repository 
 
-    gem install mysql2
+    git clone https://github.com/demiancy/tutorial-rails6-1.git
 
-## Devise
-Add support to authentication users
-### Install
-Add the gem to project  
+The repository have the files for deploy app in Docker, with the next command you start the app in the port 3000
 
-    gem install devise
+    docker-compose up
 
-Run the generator  
+In case of not have Docker, you can copy the folder app into document root of your server
 
-    rails generate devise:install  
-
-Add the config in the environment  
-
-    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-Add the root path in routes file  
-
-    root to: "home#index"
-
-Add the flash messages in the layout file (application.html.erb) 
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-Copy the device viewa into the project for customization (optional)   
-
-    rails g devise:views
-
-Add the user model
-
-    rails g device User
-
-## Nested Scaffold
-A scaffold command that generates a set of perfectly working nested resource
-### Install
-Add the gem to project
-
-    gem install nested_scaffold
-
-Use
-
-    rails g scaffold Model attributes
-
-# Notes
-
+   
