@@ -68,3 +68,4 @@ yarn-debug.log*
 
 *.code-workspace
 /gems/*
+app/.bash_history
