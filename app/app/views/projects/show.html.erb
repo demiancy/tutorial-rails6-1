@@ -1,4 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="card">
+  <div class="card-body">
+      <h2 class="card-title d-flex justify-content-between mb-4">
+      <span><%= @project.name %></span>
+
+      <div>
+        <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-warning' %>
+        <%= link_to 'Destroy', @project, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+
+    <h6>Add task</h6>
+    <%= render 'tasks/form' %>
+  </div>
+</div>
 
 <p>
   <strong>Name:</strong>
@@ -15,14 +29,12 @@
   <%= @project.user_id %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+
 <%= link_to 'Back', projects_path %>
 
 <hr>
 
-<h1>New task</h1>
 
-<%= render 'tasks/form' %>
 
 <hr>
 
