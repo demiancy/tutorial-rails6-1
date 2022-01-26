@@ -9,6 +9,10 @@ Simple project manager app
 * Project crud
 * Task crud
 
+# Documentation
+
+All documentation it is inside of our wiki.
+
 # Deployment
 
 First you have to download the repository 
