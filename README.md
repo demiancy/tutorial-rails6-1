@@ -1,5 +1,11 @@
 # tutorial-rails6-1
-First tutorial of Ruby on Rails 6 (https://www.youtube.com/watch?v=u2o_new-T0o)
+First tutorial of Ruby on Rails 6  
+* Part 1 https://www.youtube.com/watch?v=u2o_new-T0o
+* Part 2 https://www.youtube.com/watch?v=TIMPSJrqlDQ
+* Part 3 https://www.youtube.com/watch?v=MlnNkcz-oIc
+* Part 4 https://www.youtube.com/watch?v=2ck4s1nZc3I
+
+Note: For this tutorial I am use a Bootstrap 5
 
 # App
 Simple project manager app
