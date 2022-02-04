@@ -5,7 +5,10 @@ First tutorial of Ruby on Rails 6
 * Part 3 https://www.youtube.com/watch?v=MlnNkcz-oIc
 * Part 4 https://www.youtube.com/watch?v=2ck4s1nZc3I
 
-Note: For this tutorial I am use a Bootstrap 5
+Note: 
+* I am use a Bootstrap 5.
+* To install Fontawesome I use yarn.
+* In drag & drop task, only the grip icon enable the action.
 
 # App
 Simple project manager app
