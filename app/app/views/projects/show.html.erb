@@ -2,7 +2,7 @@
 
 <div class="card">
   <div class="card-body">
-      <h2 class="card-title d-flex justify-content-between mb-4">
+    <h2 class="card-title d-flex justify-content-between mb-4">
       <span><%= @project.name %></span>
 
       <div>
@@ -42,7 +42,7 @@
     </div>
 
     <h4>Tasks</h4>
-    <ul id="tasks-list" class="list-unstyled">
+    <ul id="tasks-list" class="list-unstyled sortable-list">
       <% @project.tasks.each do |task| %>
         <% if task.persisted? %>
           <li>
@@ -51,15 +51,38 @@
                 <div class="d-flex justify-content-between">
                   <div class="task-status">
                     <i class="fas fa-grip-vertical grip text-secondary me-1 handle"></i>
-                    <span class="badge bg-<%= task.badge_color %> mb-3"><%= task.status %></span>
+                    <span class="badge bg-<%= task.color_class %> mb-3"><%= task.status %></span>
                   </div>
                   <div>
-                    <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' %>
-                    <%= link_to 'Destroy', [task.project, task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark btn-sm' %>
+                    <div class="dropdown float-start">
+                      <button class="btn btn-sm me-1 btn-outline-<%= task.color_class %> dropdown-toggle" type="button" id="status-dropdown-<%= task.id %>" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= task.readable_status %>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="status-dropdown-<%= task.id %>">
+                        <% Task::STATUS_OPTIONS.each do |status| %>
+                          <li><a class="dropdown-item" href="#"
+                            data-reflex="click->StatusReflex#change"
+                            data-id="<%= task.id %>"
+                            data-status="<%= status[1] %>"
+                          >
+                            <%= status[0] %>
+                          </a></li>
+                        <% end %>
+                      </ul>
+                    </div>
+
+                    <%= link_to edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' do %>
+                      <i class='far fa-edit'></i>
+                    <% end %>
+                    <%= link_to [task.project, task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark btn-sm' do %>
+                      <i class='fas fa-trash'></i>
+                    <% end%>
                   </div>
                 </div>
                 
-                <h5 class="card-title mb-2"><%= task.name %></span></h5>
+                <h5 class="card-title mb-2">
+                  <span><%= task.name %></span>
+                </h5>
                 <p><%= task.description %></p>
               </div>
             </div>

@@ -2,17 +2,14 @@ class Project < ApplicationRecord
   has_many :tasks
   belongs_to :user
 
-  def badge_color
-    case status
-    when 'not-started'
-      'secondary'
-      
-    when 'in-progress'
-      'info'
+  STATUS_COLORS = { 
+    'not-started' => 'secondary', 
+    'in-progress' => 'info' ,
+    'complete'    => 'success'
+  }
 
-    when 'complete'
-      'success'
-    end
+  def badge_color
+    STATUS_COLORS[status]
   end
 
   def status

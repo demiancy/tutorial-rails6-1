@@ -22,9 +22,13 @@ import "@fortawesome/fontawesome-free/css/all"
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener('turbolinks:load', () => {
-  var el       = document.getElementById('tasks-list');
-  var sortable = Sortable.create(el, {
-    animation: 150,
-    handle: '.handle'
+
+  document.querySelectorAll('.sortable-list').forEach(function(el) {
+    var sortable = Sortable.create(el, {
+      animation: 150,
+      handle: '.handle'
+    });
   });
 })
+
+import "controllers"
