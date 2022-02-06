@@ -6,6 +6,5 @@ class StatusReflex < ApplicationReflex
     task.update(
       status: element.dataset[:status]
     )
-    #abort(element.dataset.inspect)
   end
 end
