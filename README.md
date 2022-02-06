@@ -11,7 +11,6 @@ Note:
 * In drag & drop task, only the grip icon enable the action.
 * Added changes between the part 2 and part 3 outside tutorial.
 * I tried remove the code "case" in the model.
-* I am use the handle option for sortablejs (only use the icon for drag and drop).
 
 # App
 Simple project manager app
