@@ -1,4 +1,4 @@
-# tutorial-rails6-1
+# Tutorial Rails 6 - Simple Project Management
 First tutorial of Ruby on Rails 6  
 * Part 1 https://www.youtube.com/watch?v=u2o_new-T0o
 * Part 2 https://www.youtube.com/watch?v=TIMPSJrqlDQ
@@ -13,12 +13,13 @@ Note:
 * I tried remove the code "case" in the model.
 
 # App
-Simple project manager app
+Simple project management app
 
 # Features
 * User authentication
-* Project crud
-* Task crud
+* Project management
+* Project task management
+* Drag & drop for ordering the tasks
 
 # Documentation
 
@@ -36,4 +37,7 @@ The repository have the files for deploy app in Docker, with the next command yo
 
 In case of not have Docker, you can copy the folder app into document root of your server
 
-   
+# Screenshots
+
+![Screenshot 1](screenshot-1.png)
+![Screenshot 2](screenshot-2.png)
